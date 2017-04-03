@@ -1,0 +1,180 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Title: SOP Ritesh Agarwal
+%% Author: Ritesh Agarwal / riteshja88@gmail.com
+%% Created: 2017-04-03
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%
+%% How to Compile:
+%%     $ xelatex main.tex
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[letterpaper]{article}
+\usepackage[letterpaper,margin=1.75in,noheadfoot]{geometry}
+\usepackage{fontspec, color, enumerate, sectsty}
+\usepackage[normalem]{ulem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                      YOUR INFORMATION
+%
+%      PLEASE EDIT THE FOLLOWING LINES ACCORDINGLY!!
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\soptitle}{Statement of Purpose}
+\newcommand{\yourname}{Ritesh Agarwal}
+\newcommand{\youremail}{riteshja88@gmail.com}
+
+%% FONTS SETUP
+\defaultfontfeatures{Mapping=tex-text}
+\setromanfont[Scale=1.0]{Helvetica Neue Light}
+\setmonofont[Scale=0.8]{Helvetica Neue Light}
+\setsansfont[Scale=0.9]{Helvetica Neue Light}
+\newcommand{\amper}{{\fontspec[Scale=.95]{Helvetica}\selectfont\itshape\&~{}}}
+\usepackage[bookmarks, colorlinks, breaklinks,
+pdftitle={\yourname - \soptitle},pdfauthor={\yourname}, unicode]{hyperref}
+\hypersetup{linkcolor=magneta,citecolor=magenta,filecolor=magenta,urlcolor=[named]{WildStrawberry}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                      Title and Author Name
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{center}{\huge \scshape \soptitle}\end{center}
+\begin{center}\vspace{0.2em} {\Large \yourname\\}
+  {\youremail}\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                      SOP Body
+% NOTE: Use \amper instead of \&
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Introduction}
+
+In 1996, computers were new and relatively uncommon in India. 
+I was one of those fortunate students to be introduced to it then. 
+Since then I have always been inclined towards  them as they  
+fascinated me with the assortment  of tasks  that  they  could  perform  with ease.
+The passion augmented when I was formally introduced to programming languages and saw 
+what few simple and precise commands would do with accuracy.
+This enthusiasm has always imbued me to go further and never stop in my pursuit for 
+excellence in computer science.
+
+I have completed my formal education in India in the field of Computer Engineering and Masters in Computer Science 
+from University of Illinois, Chicago. I have also worked about 2 years before my Masters and 2 years after in 
+related areas.
+This unique experience has given me insights of the Computer Science field and I believe revisiting the 
+education system with the insights will give me a better ability to shape my career by making sure 
+I will have he ability absorb the knowledge better,
+now that I have practical understanding of the concepts and better insights of 
+how things actually happen in a generic computer system.
+
+\section*{Research and Work Experience}
+\paragraph{Job \#1 : Mobility NFV Virtualization for Carrier Grade OS}
+My most recent work has been at Cisco where I was a part of a Cisco spin-in.
+The spin-in basically had a goal to have a Mobility Gateway stack run on Generic
+x86 CPU based blades rather than a special purpose Hardware platform. The ability 
+to repurpose the blades for other productive use, and the advancements in Virtualization
+technology calls for this kind of disruption. I have got a chance to get my hands dirty 
+with installing blades, switches, routers on the rack to installing and configuring a gateway
+in the VM thats running on the blade and define connectivity as per the need. Most of my work
+there allowed me to understand how an OS comes up starting from the Bootloader stage. I also got
+a chance to understand the linux process subsystem and thread subsystem better. I got a chance 
+to understand how gdb works internally, how packets traverse through various parts of system when 
+they enter the port until they leave a port or are consumed. A project where I had to convert a 
+32 bit to a 64 bit also gave me an idea of how cross compilers are built and how an individual
+component can be cross compiled in any system. A project I worked on also helped me understand
+how to scale up an application with more number of CPU,Memory and Network resources(NICs).
+
+\paragraph{Project \#2: IPC Subystem Cleanups in Ethos Kernel}
+This was my Master's project at University of Illinois, Chicago under the guidance of 
+Prof. Jon Solworth. As PhD. students were prototyping their research work on this
+special purpose paravirtualized OS that runs in Xen, they did not care to make sure
+that any asynchronous system call posted in the kernel on behalf of a process also needed to be 
+cleaned up when the process exited or crashed. That is where the need for this 
+project came in. This project involved intensive code browsing and call graphing
+the targeted system calls and making sure that we do the best to clean up, release
+resources held and undo any partially completed work in the kernel on behalf of the
+process. The task becomes trick with processes forking a child.
+Once this was done, the next task was to run the test suite written in Go language
+and make sure, we did not break something that worked before our changes. I also contributed 
+a few test cases.
+
+
+\paragraph{Job \#3: My First Job }
+After completing my undergraduate degree, I joined CISCO as a Software Engineer.
+Here I worked in the development and support of GGSN network node in 3G Packet Domain. 
+As a part of my work, I was able to extensively debug huge busybox type binaries, 
+find out the root cause of a crash from a core-file, and understand code with no documentation 
+at all about the code written in C language. 
+To do this I had to understand the topologies of Customer network, not only this 
+but also different nodes from different vendors were communicating with many non-standard 
+Information elements in Messages which lead to complex scenarios making it even difficult to analyze. 
+I analyzed unformatted system logs to find the root cause of a problem. 
+The extent of debugging went analysing linked lists in full cores. 
+I came up with an Automated way of testing by extending the Python Unit Testing Framework and forming 
+a testing framework over it to suit the needs of the product testing. 
+Doing this was possible since the majority of test tools that we used before for manual testing was written in Python. 
+With the framework testing for regression testin became much easier and avoided repetitive work. 
+I also got a chance to do extensive programming in Python. 
+With good knowledge of C-language for writing programs where performance matters and Python for writing programs, 
+where we are least concerned about performance but are more interested in getting things quickly, 
+I feel I can work efficiently anywhere. 
+
+
+
+\paragraph{Project \#4: A Reconfigurable Virtual Storage Device}
+This was my final year undegraduate project. This project was guided by Prof. Jaiswal from PICT and Ratnadeep Joshi from Marvell Semiconductors(Toshiba).
+We implemented and evaluated a virtual reconfigurable storage device consisting of a combination of disks of different 
+characteristics that is reconfigurable w.r.t to performance and space. The major focus was on the automatic performance reconfiguration 
+of the storage device wherein the access pattern of the disk is analyzed to characterize the groups of disk blocks. 
+Our solution moved block groups which are more frequently and randomly accessed into Solid State Drive and move back less frequently block 
+groups from Solid State Drive to Hard Drive, while at the same reduced SSD wear by demoting excessive written block groups out of SSD. 
+We took care of things like what if we are relocating/swapping blocks from one device and system halts or crashes we should not corrupt the data.
+Since our device driver was a stacking device driver over many drives, we ensured that requests given to devices have been completed. 
+For e.g the scheduler in the lower device driver might cause a request to stall for a very long time. 
+This project was inspired from Technical papers in FAST, IEEE and ACM. The main intention of undertaking this project was more 
+of learning while implementing the project.
+
+
+
+\section*{Education}
+My inclination towards Computers forced me to take a different path towards becoming a computer engineer. 
+Instead of going to junior college, I enrolled myself to a Diploma in Computer Engineering course, 
+where we were taught Computer Science concepts right from the second year of the three year course proved my 
+excellence to the professors right in the first year by securing 97\% marks in Computer Fundamentals in 
+the First Year. Moreover, I topped the college all 3 years. My good academics in Diploma helped me secure admission 
+in the coveted Pune Institute of Computer Technology (PICT) directly into the Second Year. 
+A First class with Distinction in my Bachelor's Degree is a credible proof of my academic performance. 
+Curriculum was structured in a way that while stressing over basic concepts and theoretical ideas, 
+importance was given to practical implementation wherever possible.  
+I learned tremendously during my coursework as well as lab practice, which gave me a clear 
+picture of my interests and forte. The syllabi there ranged from subjects like Data Structures, 
+Object Oriented Programming and Discrete Structures to Operating Systems, Networking, Computer Architecture 
+and Organization and Microprocessor Systems. I learned that experiments, novel ideas, implementation plans 
+and reliable tests were the key basis of modern day development. As a part of my education, I have gained knowledge about various concepts in OS, 
+Microprocessor, Data Structures, and Linux Kernel and have also implemented a stacking storage device driver. 
+I have also written many useful application programs in C, C++, Assembly Language, Visual Basic with Oracle and some small applications in Java and BASIC.
+After my undegraduate degree an two years of work experience I got a chance to complete my advanced degree at University of Illinois, Chicago with an
+average GPA of 3.85.
+
+
+\section*{Concluding Remarks}
+To summarize my work experience, I have about 4 years of industry work experience, 4
+years of intesive academic work experience through various projects undertaken. 
+I hold a Bachelors and Masters degree from reputed schools in India and US with really good GPAs.
+I wish to now shape my profile with another education opportunity. Now, that I have a better
+understandig of what I want to be, it makes much more sense to me to consider taking this step.
+
+After careful considerations, I have decided to go in for another graduate study that calls for personal commitment to 
+fulfilling the crafts of independent research and dedicated involvement.
+On in-depth study of your website, I have found the graduate program suits my interests.
+I have chosen to pursue graduate study at the University because by working under the guidance of the 
+distinguished advisors and professors, I am confident of making original contributions in the field of Computer Science. 
+I am fully aware that your curriculum requires that I beckon all my resources and 
+I maintain that I have the necessary commitment, intelligence and stamina to look forward to it all. 
+Thus, I am forwarding my application for admission into your esteemed University and request you to grant me 
+an opportunity to enrich my knowledge by interacting with great scholars of your institution. 
+I would be grateful if you can consider my candidature favorably for admission with financial support. 
+I look forward to the discovery and the challenge of my chosen career.
+
+\end{document}
